@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Loving Hands Academy</title>
+    <link rel="icon" href="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        }
+        
+        .mobile-menu {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+          max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 sm:h-20">
+        
+        <!-- Logo + School Name -->
+        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink min-w-0">
+          <img 
+            src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
+            alt="Loving Hands Academy Logo" 
+            class="h-8 sm:h-12 w-auto object-contain flex-shrink-0"
+          >
+          <div class="min-w-0">
+            <h1 class="text-sm sm:text-xl font-bold font-playfair text-blue-600 truncate">Loving Hands Academy</h1>
+            <p class="text-[8px] sm:text-[10px] text-gray-600 italic">Wisdom for Generations</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+          <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+          <a href="kindergarten.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Kindergarten</a>
+          <a href="primary.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Primary</a>
+          <a href="admissions.html" class="nav-link text-blue-600 font-medium">Admissions</a>
+          <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+          <a href="kindergarten.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Kindergarten</a>
+          <a href="primary.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Primary</a>
+          <a href="admissions.html" class="block px-3 py-2 text-blue-600 font-medium">Admissions</a>
+          <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center text-white pt-20">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.ibb.co/4wmNY6bK/IMG-1906.jpg');">
+            <div class="overlay absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-4">School Admission</h1>
+            <p class="text-xl md:text-2xl">Join Our Learning Community</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                In order to be ready, here is a list of school requirements so that our children will be ready for the best learning experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- School Admission Requirements -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">School Admission Requirements</h2>
+            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-10">
+                <ul class="space-y-4 text-gray-700 text-lg">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>Completed application form</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>Copy of your child's birth certificate</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>2 passport size photographs of your child</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>Previous school report (if transferring)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>Photocopy of National ID of parent/guardian</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
+                        <span>Immunization records</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Fees Structure -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">School Fees Structure</h2>
+            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-10">
+                <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                    Download our complete fees structure for the 2025 academic year. All fees are payable before the start of each term. Bank slips should be presented to the bursar's office for record purposes.
+                </p>
+                <button onclick="downloadFeesStructure()" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition inline-flex items-center space-x-2 shadow-lg text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span>Download Fees Structure (PDF)</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Enroll Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl shadow-2xl p-12 text-white text-center">
+                <h2 class="text-4xl md:text-5xl font-bold font-playfair mb-6">Ready to Enroll?</h2>
+                <p class="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
+                    We're here to guide you through every step of the admission process. Contact our admissions team today and let's begin your child's journey to success.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="application-form.html" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-xl text-lg">
+                        Apply Now
+                    </a>
+                    <a href="contact.html" class="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition text-lg">
+                        Contact Admissions Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">Get in Touch</h2>
+            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
+            <div class="bg-white rounded-2xl shadow-lg p-10">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-xl mb-3">Location</h3>
+                        <p class="text-gray-700 text-lg">Hosanna Rd, Kabale B<br>Entebbe Municipality<br>Wakiso District, Uganda</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-xl mb-3">Phone Numbers</h3>
+                        <div class="space-y-1">
+                            <p class="text-blue-600 font-medium text-lg">+256 777 875 736</p>
+                            <p class="text-blue-600 font-medium text-lg">+256 709 290 729</p>
+                            <p class="text-blue-600 font-medium text-lg">+256 755 377 171</p>
+                            <p class="text-blue-600 font-medium text-lg">+256 775 092 766</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-xl mb-3">Email</h3>
+                        <p class="text-blue-600 font-medium text-lg">admissions@lovinghandsacademy.ac.ug</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-xl mb-3">Office Hours</h3>
+                        <p class="text-gray-700 text-lg">Monday - Friday: 8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img 
+                            src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
+                            alt="Loving Hands Academy Logo" 
+                            class="h-12 w-auto object-contain"
+                        >
+                        <div>
+                            <h3 class="text-xl font-bold font-playfair">Loving Hands Academy</h3>
+                            <p class="text-lg italic text-blue-400">Wisdom for Generations</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">A place to Learn, Develop and Grow happy healthy children through Christian values and academic excellence.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="kindergarten.html" class="text-gray-400 hover:text-white transition">Kindergarten</a></li>
+                        <li><a href="primary.html" class="text-gray-400 hover:text-white transition">Primary School</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white transition">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Hosanna Rd, Kabale B</li>
+                        <li>Entebbe Municipality</li>
+                        <li>Wakiso District, Uganda</li>
+                        <li class="pt-2">+256 777 875 736</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Loving Hands Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when scrolling
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (mobileMenu.classList.contains('active')) {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    mobileMenu.classList.remove('active');
+                }, 100);
+            }
+        });
+
+        function downloadFeesStructure() {
+            window.open('fees_structure.pdf', '_blank');
+        }
+    </script>
+</body>
+</html>
