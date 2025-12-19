@@ -39,21 +39,6 @@
         .nav-link:hover::after {
             width: 100%;
         }
-
-        .success-message {
-            animation: slideDown 0.5s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
         
         .mobile-menu {
             max-height: 0;
@@ -64,6 +49,15 @@
         .mobile-menu.active {
             max-height: 400px;
         }
+
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -71,8 +65,6 @@
     <nav class="bg-white shadow-md fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20">
-                
-                <!-- Logo + School Name -->
                 <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink min-w-0">
                     <img 
                         src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
@@ -85,7 +77,6 @@
                     </div>
                 </a>
 
-                <!-- Desktop Nav Links -->
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
                     <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">About</a>
@@ -95,7 +86,6 @@
                     <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -103,7 +93,6 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu -->
             <div id="mobile-menu" class="mobile-menu md:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
@@ -125,244 +114,94 @@
         </div>
     </section>
 
-    <!-- Application Form Section -->
+    <!-- Download Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Success Message -->
-            <div id="successMessage" class="hidden success-message bg-green-50 border-l-4 border-green-500 px-6 py-5 rounded-lg mb-8 shadow-md">
-                <div class="flex items-start">
-                    <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <div>
-                        <p class="font-semibold text-green-800 text-lg">Application submitted successfully!</p>
-                        <p class="text-green-700 mt-1">We'll review your application and contact you within 2-3 business days.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Error Message -->
-            <div id="errorMessage" class="hidden bg-red-50 border-l-4 border-red-500 px-6 py-5 rounded-lg mb-8 shadow-md">
-                <div class="flex items-start">
-                    <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <div>
-                        <p class="font-semibold text-red-800 text-lg">Something went wrong</p>
-                        <p class="text-red-700 mt-1">Please try again or contact us directly at +256 777 875 736</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-                <div class="mb-10 pb-6 border-b border-gray-200">
-                    <h2 class="text-3xl font-bold font-playfair text-gray-900 mb-3">Student Application</h2>
-                    <p class="text-gray-600">Please complete all required fields marked with <span class="text-red-500">*</span></p>
+                <div class="text-center mb-10">
+                    <svg class="w-20 h-20 mx-auto text-blue-600 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                    <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-4">Download Application Form</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                        Download our comprehensive application form to begin the enrollment process. Please fill out all sections completely and accurately.
+                    </p>
                 </div>
-                
-                <form id="applicationForm" class="space-y-12">
-                    <!-- Student Information -->
-                    <div>
-                        <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6 pb-2 border-b-2 border-blue-600">Student Information</h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="studentFirstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="studentFirstName" name="studentFirstName" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+
+                <div class="text-center mb-10">
+                    <a href="LHA-Application-Form.pdf" download class="download-btn inline-flex items-center bg-blue-600 text-white px-10 py-5 rounded-lg font-bold text-lg shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Download Application Form
+                    </a>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8">
+                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6">What to Include</h3>
+                    <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-700 mb-4">Please ensure you have the following documents ready before completing the form:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Copy of child's immunization card or birth certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Recent passport-sized photographs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Emergency contact information</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6">How to Submit</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-900">In Person</h4>
                             </div>
-                            <div>
-                                <label for="studentLastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="studentLastName" name="studentLastName" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
+                            <p class="text-gray-600 mb-3">Visit our school office:</p>
+                            <p class="text-gray-700 font-medium">Hosanna Rd, Kabale B<br>Entebbe Municipality<br>Wakiso District, Uganda</p>
                         </div>
 
-                        <div class="grid md:grid-cols-3 gap-6 mb-6">
-                            <div>
-                                <label for="dateOfBirth" class="block text-sm font-semibold text-gray-700 mb-2">Date of Birth <span class="text-red-500">*</span></label>
-                                <input type="date" id="dateOfBirth" name="dateOfBirth" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-900">By Email</h4>
                             </div>
-                            <div>
-                                <label for="gender" class="block text-sm font-semibold text-gray-700 mb-2">Gender <span class="text-red-500">*</span></label>
-                                <select id="gender" name="gender" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    <option value="">Select</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="nationality" class="block text-sm font-semibold text-gray-700 mb-2">Nationality <span class="text-red-500">*</span></label>
-                                <input type="text" id="nationality" name="nationality" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">Home Address <span class="text-red-500">*</span></label>
-                            <textarea id="address" name="address" rows="2" required
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+                            <p class="text-gray-600 mb-3">Send completed form to:</p>
+                            <p class="text-gray-700 font-medium">admissions@lovinghandsacademy.org</p>
+                            <p class="text-gray-700 font-medium">info@lovinghandsacademy.org</p>
                         </div>
                     </div>
 
-                    <!-- Program Selection -->
-                    <div>
-                        <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6 pb-2 border-b-2 border-blue-600">Program Selection</h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="program" class="block text-sm font-semibold text-gray-700 mb-2">Program <span class="text-red-500">*</span></label>
-                                <select id="program" name="program" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    <option value="">Select Program</option>
-                                    <option value="Kindergarten">Kindergarten</option>
-                                    <option value="Primary 1">Primary 1</option>
-                                    <option value="Primary 2">Primary 2</option>
-                                    <option value="Primary 3">Primary 3</option>
-                                    <option value="Primary 4">Primary 4</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="startDate" class="block text-sm font-semibold text-gray-700 mb-2">Intended Start Date <span class="text-red-500">*</span></label>
-                                <input type="date" id="startDate" name="startDate" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="previousSchool" class="block text-sm font-semibold text-gray-700 mb-2">Previous School (if applicable)</label>
-                            <input type="text" id="previousSchool" name="previousSchool"
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                        </div>
-                    </div>
-
-                    <!-- Parent/Guardian Information -->
-                    <div>
-                        <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6 pb-2 border-b-2 border-blue-600">Parent/Guardian Information</h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="parentFirstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="parentFirstName" name="parentFirstName" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                            <div>
-                                <label for="parentLastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name <span class="text-red-500">*</span></label>
-                                <input type="text" id="parentLastName" name="parentLastName" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="relationship" class="block text-sm font-semibold text-gray-700 mb-2">Relationship to Student <span class="text-red-500">*</span></label>
-                                <select id="relationship" name="relationship" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    <option value="">Select</option>
-                                    <option value="Mother">Mother</option>
-                                    <option value="Father">Father</option>
-                                    <option value="Guardian">Guardian</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="occupation" class="block text-sm font-semibold text-gray-700 mb-2">Occupation</label>
-                                <input type="text" id="occupation" name="occupation"
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="parentEmail" class="block text-sm font-semibold text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
-                                <input type="email" id="parentEmail" name="parentEmail" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            </div>
-                            <div>
-                                <label for="parentPhone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
-                                <input type="tel" id="parentPhone" name="parentPhone" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                                       placeholder="+256 XXX XXX XXX">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="emergencyContact" class="block text-sm font-semibold text-gray-700 mb-2">Emergency Contact (Name & Phone) <span class="text-red-500">*</span></label>
-                            <input type="text" id="emergencyContact" name="emergencyContact" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                                   placeholder="e.g., Jane Doe - +256 XXX XXX XXX">
-                        </div>
-                    </div>
-
-                    <!-- Medical Information -->
-                    <div>
-                        <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6 pb-2 border-b-2 border-blue-600">Medical Information</h3>
-                        
-                        <div class="mb-6">
-                            <label for="allergies" class="block text-sm font-semibold text-gray-700 mb-2">Allergies or Medical Conditions</label>
-                            <textarea id="allergies" name="allergies" rows="3"
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                                      placeholder="Please list any allergies, medical conditions, or special needs"></textarea>
-                        </div>
-
-                        <div>
-                            <label for="medications" class="block text-sm font-semibold text-gray-700 mb-2">Current Medications</label>
-                            <input type="text" id="medications" name="medications"
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                                   placeholder="List any medications the student takes regularly">
-                        </div>
-                    </div>
-
-                    <!-- Additional Information -->
-                    <div>
-                        <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6 pb-2 border-b-2 border-blue-600">Additional Information</h3>
-                        
-                        <div class="mb-6">
-                            <label for="hearAboutUs" class="block text-sm font-semibold text-gray-700 mb-2">How did you hear about us? <span class="text-red-500">*</span></label>
-                            <select id="hearAboutUs" name="hearAboutUs" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                <option value="">Select an option</option>
-                                <option value="Friend/Family Referral">Friend/Family Referral</option>
-                                <option value="Social Media">Social Media</option>
-                                <option value="Google Search">Google Search</option>
-                                <option value="School Visit">School Visit</option>
-                                <option value="Advertisement">Advertisement</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="additionalComments" class="block text-sm font-semibold text-gray-700 mb-2">Additional Comments or Questions</label>
-                            <textarea id="additionalComments" name="additionalComments" rows="4"
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                                      placeholder="Anything else you'd like us to know?"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Agreement -->
-                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                        <label class="flex items-start cursor-pointer">
-                            <input type="checkbox" id="agreement" name="agreement" required
-                                   class="mt-1 mr-3 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
-                            <span class="text-sm text-gray-700 leading-relaxed">
-                                I confirm that the information provided is accurate and complete. I understand that this application does not guarantee admission and that Loving Hands Academy reserves the right to request additional information or documentation. <span class="text-red-500">*</span>
-                            </span>
-                        </label>
-                    </div>
-
-                    <button type="submit" id="submitBtn"
-                            class="w-full bg-blue-600 text-white px-8 py-5 rounded-lg font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl flex items-center justify-center">
-                        <span id="btnText">Submit Application</span>
-                        <span id="btnLoader" class="hidden ml-3">
-                            <svg class="animate-spin h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <div class="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                        </span>
-                    </button>
-                </form>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-2">Need Help?</p>
+                                <p class="text-gray-700">If you have any questions about the application process, please contact us at <strong>+256 777 875 736</strong> or email us at the addresses above. We typically respond within 2-3 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -406,7 +245,6 @@
     </footer>
 
     <script>
-        // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -414,7 +252,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
         const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -422,7 +259,6 @@
             });
         });
 
-        // Close mobile menu when scrolling
         let scrollTimeout;
         window.addEventListener('scroll', () => {
             if (mobileMenu.classList.contains('active')) {
@@ -430,85 +266,6 @@
                 scrollTimeout = setTimeout(() => {
                     mobileMenu.classList.remove('active');
                 }, 100);
-            }
-        });
-
-        // Form submission functionality
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZOubTYc-3kot75weDoOghSn_XnawMXiZLz63dI_KpzMV9XN70DyoP9uRP4BEyPfA/exec';
-
-        const form = document.getElementById('applicationForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const btnText = document.getElementById('btnText');
-        const btnLoader = document.getElementById('btnLoader');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Hide previous messages
-            successMessage.classList.add('hidden');
-            errorMessage.classList.add('hidden');
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            btnText.textContent = 'Submitting...';
-            btnLoader.classList.remove('hidden');
-            
-            // Collect form data
-            const formData = new FormData(form);
-            const data = {
-                timestamp: new Date().toLocaleString(),
-                studentFirstName: formData.get('studentFirstName'),
-                studentLastName: formData.get('studentLastName'),
-                dateOfBirth: formData.get('dateOfBirth'),
-                gender: formData.get('gender'),
-                nationality: formData.get('nationality'),
-                address: formData.get('address'),
-                program: formData.get('program'),
-                startDate: formData.get('startDate'),
-                previousSchool: formData.get('previousSchool') || 'N/A',
-                parentFirstName: formData.get('parentFirstName'),
-                parentLastName: formData.get('parentLastName'),
-                relationship: formData.get('relationship'),
-                occupation: formData.get('occupation') || 'N/A',
-                parentEmail: formData.get('parentEmail'),
-                parentPhone: formData.get('parentPhone'),
-                emergencyContact: formData.get('emergencyContact'),
-                allergies: formData.get('allergies') || 'None',
-                medications: formData.get('medications') || 'None',
-                hearAboutUs: formData.get('hearAboutUs'),
-                additionalComments: formData.get('additionalComments') || 'None'
-            };
-            
-            try {
-                // Send to Google Sheets
-                const response = await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    cache: 'no-cache',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                // Show success message (no-cors mode always succeeds)
-                successMessage.classList.remove('hidden');
-                form.reset();
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-            } catch (error) {
-                console.error('Error:', error);
-                errorMessage.classList.remove('hidden');
-                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } finally {
-                // Reset button state
-                submitBtn.disabled = false;
-                btnText.textContent = 'Submit Application';
-                btnLoader.classList.add('hidden');
             }
         });
     </script>
