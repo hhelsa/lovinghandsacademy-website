@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions - Loving Hands Academy</title>
+    <title>Application Form - Loving Hands Academy</title>
     <link rel="icon" href="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -39,196 +39,167 @@
         .nav-link:hover::after {
             width: 100%;
         }
-
-        .overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-        }
         
         .mobile-menu {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
         }
-        
+
         .mobile-menu.active {
-          max-height: 400px;
+            max-height: 400px;
+        }
+
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
         }
     </style>
 </head>
-<body class="bg-white">
-
+<body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 sm:h-20">
-        
-        <!-- Logo + School Name -->
-        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink min-w-0">
-          <img 
-            src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
-            alt="Loving Hands Academy Logo" 
-            class="h-8 sm:h-12 w-auto object-contain flex-shrink-0"
-          >
-          <div class="min-w-0">
-            <h1 class="text-sm sm:text-xl font-bold font-playfair text-blue-600 truncate">Loving Hands Academy</h1>
-            <p class="text-[8px] sm:text-[10px] text-gray-600 italic">Wisdom for Generations</p>
-          </div>
-        </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink min-w-0">
+                    <img 
+                        src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
+                        alt="Loving Hands Academy Logo" 
+                        class="h-8 sm:h-12 w-auto object-contain flex-shrink-0"
+                    >
+                    <div class="min-w-0">
+                        <h1 class="text-sm sm:text-xl font-bold font-playfair text-blue-600 truncate">Loving Hands Academy</h1>
+                        <p class="text-[8px] sm:text-[10px] text-gray-600 italic">Wisdom for Generations</p>
+                    </div>
+                </a>
 
-        <!-- Desktop Nav Links -->
-        <div class="hidden md:flex space-x-8">
-          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
-          <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">About</a>
-          <a href="kindergarten.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Kindergarten</a>
-          <a href="primary.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Primary</a>
-          <a href="admissions.html" class="nav-link text-blue-600 font-medium">Admissions</a>
-          <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
-        </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="kindergarten.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Kindergarten</a>
+                    <a href="primary.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Primary</a>
+                    <a href="admissions.html" class="nav-link text-blue-600 font-medium">Admissions</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="mobile-menu md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
-          <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
-          <a href="kindergarten.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Kindergarten</a>
-          <a href="primary.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Primary</a>
-          <a href="admissions.html" class="block px-3 py-2 text-blue-600 font-medium">Admissions</a>
-          <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-    <!-- Hero Section -->
-    <section class="relative h-96 flex items-center justify-center text-white pt-20">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.ibb.co/4wmNY6bK/IMG-1906.jpg');">
-            <div class="overlay absolute inset-0"></div>
-        </div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-4">School Admission</h1>
-            <p class="text-xl md:text-2xl">Join Our Learning Community</p>
-        </div>
-    </section>
-
-    <!-- Introduction -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-lg text-gray-700 leading-relaxed">
-                In order to be ready, here is a list of school requirements so that our children will be ready for the best learning experience.
-            </p>
-        </div>
-    </section>
-
-    <!-- School Admission Requirements -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">School Admission Requirements</h2>
-            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
-            <div class="bg-white rounded-2xl shadow-lg p-10">
-                <ul class="space-y-4 text-gray-700 text-lg">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>Completed application form</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>Copy of your child's birth certificate</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>2 passport size photographs of your child</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>Previous school report (if transferring)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>Photocopy of National ID of parent/guardian</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 font-bold mr-4 mt-1">—</span>
-                        <span>Immunization records</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- School Fees Structure -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">School Fees Structure</h2>
-            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
-            <div class="bg-white rounded-2xl shadow-lg p-10">
-                <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-                    Download our complete fees structure for the 2025 academic year. All fees are payable before the start of each term. Bank slips should be presented to the bursar's office for record purposes.
-                </p>
-                <button onclick="downloadFeesStructure()" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition inline-flex items-center space-x-2 shadow-lg text-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
-                    <span>Download Fees Structure (PDF)</span>
                 </button>
             </div>
-        </div>
-    </section>
 
-    <!-- Ready to Enroll Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl shadow-2xl p-12 text-white text-center">
-                <h2 class="text-4xl md:text-5xl font-bold font-playfair mb-6">Ready to Enroll?</h2>
-                <p class="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
-                    We're here to guide you through every step of the admission process. Contact our admissions team today and let's begin your child's journey to success.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="application-form.html" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-xl text-lg">
-                        Apply Now
-                    </a>
-                    <a href="contact.html" class="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition text-lg">
-                        Contact Admissions Team
-                    </a>
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+                    <a href="kindergarten.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Kindergarten</a>
+                    <a href="primary.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Primary</a>
+                    <a href="admissions.html" class="block px-3 py-2 text-blue-600 font-medium">Admissions</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-blue-600 to-blue-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-6">Application Form</h1>
+            <p class="text-xl md:text-2xl">Begin your child's journey at Loving Hands Academy</p>
+        </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4">Get in Touch</h2>
-            <div class="w-24 h-1 bg-blue-600 mb-8"></div>
-            <div class="bg-white rounded-2xl shadow-lg p-10">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="font-bold text-gray-900 text-xl mb-3">Location</h3>
-                        <p class="text-gray-700 text-lg">Hosanna Rd, Kabale B<br>Entebbe Municipality<br>Wakiso District, Uganda</p>
+    <!-- Download Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <svg class="w-20 h-20 mx-auto text-blue-600 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                    <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-4">Download Application Form</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                        Download our comprehensive application form to begin the enrollment process. Please fill out all sections completely and accurately.
+                    </p>
+                </div>
+
+                <div class="text-center mb-10">
+                    <a href="LHA-Application-Form.pdf" download class="download-btn inline-flex items-center bg-blue-600 text-white px-10 py-5 rounded-lg font-bold text-lg shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Download Application Form
+                    </a>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8">
+                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6">What to Include</h3>
+                    <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-700 mb-4">Please ensure you have the following documents ready before completing the form:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Copy of child's immunization card or birth certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Recent passport-sized photographs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-700">Emergency contact information</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900 text-xl mb-3">Phone Numbers</h3>
-                        <div class="space-y-1">
-                            <p class="text-blue-600 font-medium text-lg">+256 777 875 736</p>
-                            <p class="text-blue-600 font-medium text-lg">+256 709 290 729</p>
-                            <p class="text-blue-600 font-medium text-lg">+256 755 377 171</p>
-                            <p class="text-blue-600 font-medium text-lg">+256 775 092 766</p>
+
+                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-6">How to Submit</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-900">In Person</h4>
+                            </div>
+                            <p class="text-gray-600 mb-3">Visit our school office:</p>
+                            <p class="text-gray-700 font-medium">Hosanna Rd, Kabale B<br>Entebbe Municipality<br>Wakiso District, Uganda</p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-900">By Email</h4>
+                            </div>
+                            <p class="text-gray-600 mb-3">Send completed form to:</p>
+                            <p class="text-gray-700 font-medium">admissions@lovinghandsacademy.org</p>
+                            <p class="text-gray-700 font-medium">info@lovinghandsacademy.org</p>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900 text-xl mb-3">Email</h3>
-                        <p class="text-blue-600 font-medium text-lg">admissions@lovinghandsacademy.ac.ug</p>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900 text-xl mb-3">Office Hours</h3>
-                        <p class="text-gray-700 text-lg">Monday - Friday: 8:00 AM - 4:00 PM</p>
+
+                    <div class="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-2">Need Help?</p>
+                                <p class="text-gray-700">If you have any questions about the application process, please contact us at <strong>+256 777 875 736</strong> or email us at the addresses above. We typically respond within 2-3 business days.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,21 +207,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer class="bg-gray-900 text-white py-16 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <img 
-                            src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
-                            alt="Loving Hands Academy Logo" 
-                            class="h-12 w-auto object-contain"
-                        >
-                        <div>
-                            <h3 class="text-xl font-bold font-playfair">Loving Hands Academy</h3>
-                            <p class="text-lg italic text-blue-400">Wisdom for Generations</p>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold font-playfair mb-4">Loving Hands Academy</h3>
+                    <p class="text-xl italic text-blue-400 mb-4">Wisdom for Generations</p>
                     <p class="text-gray-400 leading-relaxed">A place to Learn, Develop and Grow happy healthy children through Christian values and academic excellence.</p>
                 </div>
                 
@@ -283,7 +245,6 @@
     </footer>
 
     <script>
-        // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -291,7 +252,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
         const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -299,7 +259,6 @@
             });
         });
 
-        // Close mobile menu when scrolling
         let scrollTimeout;
         window.addEventListener('scroll', () => {
             if (mobileMenu.classList.contains('active')) {
@@ -309,10 +268,6 @@
                 }, 100);
             }
         });
-
-        function downloadFeesStructure() {
-            window.open('fees_structure.pdf', '_blank');
-        }
     </script>
 </body>
 </html>
