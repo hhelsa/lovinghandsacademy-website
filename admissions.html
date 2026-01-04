@@ -28,7 +28,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #2563eb;
+            background: #ffffff;
             transition: width 0.3s ease;
         }
 
@@ -54,161 +54,169 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
+
+        .overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="bg-[#2a4494] shadow-md fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20">
                 <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink min-w-0">
                     <img 
                         src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
                         alt="Loving Hands Academy Logo" 
-                        class="h-8 sm:h-12 w-auto object-contain flex-shrink-0"
+                        class="h-8 sm:h-12 w-auto object-contain flex-shrink-0 bg-white rounded-full p-1"
                     >
                     <div class="min-w-0">
-                        <h1 class="text-sm sm:text-xl font-bold font-playfair text-blue-600 truncate">Loving Hands Academy</h1>
-                        <p class="text-[8px] sm:text-[10px] text-gray-600 italic">Wisdom for Generations</p>
+                        <h1 class="text-sm sm:text-xl font-bold font-playfair text-white truncate">Loving Hands Academy</h1>
+                        <p class="text-[8px] sm:text-[10px] text-blue-100 italic">Wisdom for Generations</p>
                     </div>
                 </a>
 
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
-                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">About</a>
-                    <a href="kindergarten.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Kindergarten</a>
-                    <a href="primary.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Primary</a>
-                    <a href="admissions.html" class="nav-link text-blue-600 font-medium">Admissions</a>
-                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                    <a href="index.html" class="nav-link text-blue-100 hover:text-white font-medium transition">Home</a>
+                    <a href="about.html" class="nav-link text-blue-100 hover:text-white font-medium transition">About</a>
+                    <a href="kindergarten.html" class="nav-link text-blue-100 hover:text-white font-medium transition">Kindergarten</a>
+                    <a href="primary.html" class="nav-link text-blue-100 hover:text-white font-medium transition">Primary</a>
+                    <a href="admissions.html" class="nav-link text-white font-medium">Admissions</a>
+                    <a href="contact.html" class="nav-link text-blue-100 hover:text-white font-medium transition">Contact</a>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2">
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
 
-            <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-[#2a4494]">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
-                    <a href="kindergarten.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Kindergarten</a>
-                    <a href="primary.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Primary</a>
-                    <a href="admissions.html" class="block px-3 py-2 text-blue-600 font-medium">Admissions</a>
-                    <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="index.html" class="block px-3 py-2 text-blue-100 hover:text-white font-medium">Home</a>
+                    <a href="about.html" class="block px-3 py-2 text-blue-100 hover:text-white font-medium">About</a>
+                    <a href="kindergarten.html" class="block px-3 py-2 text-blue-100 hover:text-white font-medium">Kindergarten</a>
+                    <a href="primary.html" class="block px-3 py-2 text-blue-100 hover:text-white font-medium">Primary</a>
+                    <a href="admissions.html" class="block px-3 py-2 text-white font-bold bg-[#1e316b] rounded">Admissions</a>
+                    <a href="contact.html" class="block px-3 py-2 text-blue-100 hover:text-white font-medium">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Blue Background -->
-    <section class="relative pt-32 pb-20 bg-gradient-to-br from-blue-600 to-blue-500 text-white">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-[#2a4494] to-[#1e316b] text-white">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.ibb.co/DDGQfnDx/schoollandscape.jpg');">
-            <div class="page-header-overlay absolute inset-0"></div>
+            <div class="overlay absolute inset-0"></div>
         </div>
         <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-6">Admissions</h1>
-            <p class="text-xl md:text-2xl">Join the Loving Hands Academy Family</p>
+            <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold font-playfair mb-4 sm:mb-6">Admissions</h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-playfair italic">Join the Loving Hands Academy Family</p>
         </div>
     </section>
 
     <!-- Welcome Section -->
-    <section class="py-20 bg-white">
+    <section class="py-12 sm:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-6">Enroll Your Child Today</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-                <p class="text-xl text-gray-700 leading-relaxed">
+            <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-4 sm:mb-6">Enroll Your Child Today</h2>
+                <div class="w-20 h-1 bg-[#2a4494] mx-auto mb-6 sm:mb-8"></div>
+                <p class="text-sm sm:text-lg text-gray-700 leading-relaxed">
                     Thank you for considering Loving Hands Academy for your child's education. We make the enrollment process simple so you can focus on what matters most—preparing your child for an exciting learning journey.
                 </p>
             </div>
 
             <!-- Three Steps -->
-            <div class="grid md:grid-cols-3 gap-10 mb-16">
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-4xl font-bold text-white">1</span>
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-10">
+                <div class="text-center p-4 sm:p-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#2a4494] to-[#1e316b] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                        <span class="text-2xl sm:text-3xl font-bold text-white">1</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-4">Download Form</h3>
-                    <p class="text-gray-700 leading-relaxed text-lg">Get our application form below. Print it out or fill it digitally—whichever works best for you.</p>
+                    <h3 class="text-lg sm:text-xl font-bold font-playfair text-gray-900 mb-3 sm:mb-4">Download Form</h3>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Get our application form below. Print it out or fill it digitally—whichever works best for you.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-4xl font-bold text-white">2</span>
+                <div class="text-center p-4 sm:p-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-600 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                        <span class="text-2xl sm:text-3xl font-bold text-white">2</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-4">Fill it Out</h3>
-                    <p class="text-gray-700 leading-relaxed text-lg">Take your time completing the form with your child's information and your contact details.</p>
+                    <h3 class="text-lg sm:text-xl font-bold font-playfair text-gray-900 mb-3 sm:mb-4">Fill it Out</h3>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Take your time completing the form with your child's information and your contact details.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-4xl font-bold text-white">3</span>
+                <div class="text-center p-4 sm:p-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pink-600 to-pink-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                        <span class="text-2xl sm:text-3xl font-bold text-white">3</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-playfair text-gray-900 mb-4">Visit Us</h3>
-                    <p class="text-gray-700 leading-relaxed text-lg">Bring your completed form and documents to our office. We'll handle the rest together.</p>
+                    <h3 class="text-lg sm:text-xl font-bold font-playfair text-gray-900 mb-3 sm:mb-4">Visit Us</h3>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Bring your completed form and documents to our office. We'll handle the rest together.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-12 sm:py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl shadow-xl p-10 mb-12">
-                <div class="text-center mb-8">
-                    <svg class="w-20 h-20 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 mb-8 sm:mb-12 card-hover">
+                <div class="text-center mb-6 sm:mb-8">
+                    <svg class="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-[#2a4494] mb-3 sm:mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                     </svg>
-                    <h3 class="text-3xl font-bold font-playfair text-gray-900 mb-4">Application Form</h3>
-                    <p class="text-gray-600 mb-8">Ready to start? Download the form and begin your enrollment journey.</p>
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold font-playfair text-gray-900 mb-3 sm:mb-4">Application Form</h3>
+                    <p class="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">Ready to start? Download the form and begin your enrollment journey.</p>
                 </div>
                 
-                <a href="LHA-Application-Form.pdf" download class="block w-full bg-blue-600 text-white text-center px-8 py-5 rounded-xl font-bold text-xl hover:bg-blue-700 transition shadow-lg mb-4">
+                <a href="LHA-Application-Form.pdf" download class="block w-full bg-[#2a4494] text-white text-center px-6 sm:px-8 py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg hover:bg-[#1e316b] transition shadow-lg mb-3 sm:mb-4">
                     <div class="flex items-center justify-center">
-                        <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                         Download Application Form
                     </div>
                 </a>
-                <p class="text-center text-sm text-gray-500">PDF Format • Printable • Free</p>
+                <p class="text-center text-xs sm:text-sm text-gray-500">PDF Format • Printable • Free</p>
             </div>
 
             <!-- Requirements Card -->
-            <div class="bg-white rounded-2xl shadow-xl p-10">
-                <h3 class="text-3xl font-bold font-playfair text-gray-900 mb-8 text-center">What to Bring</h3>
-                <p class="text-gray-700 mb-6 text-lg text-center">When you visit our school, please have these documents ready:</p>
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 card-hover">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold font-playfair text-gray-900 mb-6 sm:mb-8 text-center">What to Bring</h3>
+                <p class="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 text-center">When you visit our school, please have these documents ready:</p>
                 
-                <div class="space-y-5">
-                    <div class="flex items-start bg-blue-50 rounded-xl p-5">
-                        <svg class="w-7 h-7 text-blue-600 mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="space-y-4 sm:space-y-5">
+                    <div class="flex items-start bg-blue-50 rounded-xl p-4 sm:p-5">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#2a4494] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <div>
-                            <p class="font-semibold text-gray-900 text-lg">Completed Application Form</p>
-                            <p class="text-gray-600">All sections filled out accurately</p>
+                            <p class="font-semibold text-gray-900 text-sm sm:text-base">Completed Application Form</p>
+                            <p class="text-xs sm:text-sm text-gray-600">All sections filled out accurately</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start bg-blue-50 rounded-xl p-5">
-                        <svg class="w-7 h-7 text-blue-600 mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-start bg-blue-50 rounded-xl p-4 sm:p-5">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#2a4494] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <div>
-                            <p class="font-semibold text-gray-900 text-lg">Child's Documents</p>
-                            <p class="text-gray-600">Copy of immunization card or birth certificate</p>
+                            <p class="font-semibold text-gray-900 text-sm sm:text-base">Child's Documents</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Copy of immunization card or birth certificate</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start bg-blue-50 rounded-xl p-5">
-                        <svg class="w-7 h-7 text-blue-600 mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-start bg-blue-50 rounded-xl p-4 sm:p-5">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#2a4494] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <div>
-                            <p class="font-semibold text-gray-900 text-lg">Passport Photos</p>
-                            <p class="text-gray-600">Two recent passport-sized photographs</p>
+                            <p class="font-semibold text-gray-900 text-sm sm:text-base">Passport Photos</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Two recent passport-sized photographs</p>
                         </div>
                     </div>
                 </div>
@@ -217,41 +225,42 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-6">Ready to Get Started?</h2>
-            <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p class="text-xl text-gray-700 leading-relaxed mb-10">
+    <section class="py-12 sm:py-20 bg-gradient-to-br from-[#2a4494] to-[#1e316b] text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-playfair mb-4 sm:mb-6">Ready to Get Started?</h2>
+            <p class="text-sm sm:text-lg mb-8 sm:mb-10 leading-relaxed">
                 We're here to help with any questions you have about enrolling your child. Get in touch with us and we'll guide you through every step of the process.
             </p>
-            <a href="contact.html" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-blue-700 transition shadow-lg">
-                Contact Us
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center">
+                <a href="contact.html" class="bg-white text-[#2a4494] px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition shadow-xl">
+                    Contact Us
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16 mt-16">
+    <footer class="bg-gray-900 text-white py-12 sm:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div class="grid md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
                         <img 
                             src="https://i.ibb.co/5xrRvbRq/lha-logo-final.png" 
                             alt="Loving Hands Academy Logo" 
-                            class="h-12 w-auto object-contain"
+                            class="h-8 sm:h-10 w-auto object-contain bg-white rounded p-1"
                         >
                         <div>
-                            <h3 class="text-xl font-bold font-playfair">Loving Hands Academy</h3>
-                            <p class="text-lg italic text-blue-400">Wisdom for Generations</p>
+                            <h3 class="text-lg sm:text-xl font-bold font-playfair">Loving Hands Academy</h3>
+                            <p class="text-xs sm:text-sm italic text-blue-300">Wisdom for Generations</p>
                         </div>
                     </div>
-                    <p class="text-gray-400 leading-relaxed">A place to Learn, Develop and Grow happy healthy children through Christian values and academic excellence.</p>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">A place to Learn, Develop and Grow happy healthy children through Christian values and academic excellence.</p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
+                    <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
                         <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
                         <li><a href="kindergarten.html" class="text-gray-400 hover:text-white transition">Kindergarten</a></li>
                         <li><a href="primary.html" class="text-gray-400 hover:text-white transition">Primary School</a></li>
@@ -261,18 +270,18 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <h4 class="text-base sm:text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
                         <li>Hosanna Rd, Kabale B</li>
                         <li>Entebbe Municipality</li>
                         <li>Wakiso District, Uganda</li>
-                        <li class="pt-2">+256 777 875 736</li>
+                        <li class="pt-2 text-white font-semibold">+256 777 875 736</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Loving Hands Academy. All rights reserved.</p>
+            <div class="border-t border-gray-800 pt-6 sm:pt-8 text-center">
+                <p class="text-xs sm:text-sm text-gray-400">© 2025 Loving Hands Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
